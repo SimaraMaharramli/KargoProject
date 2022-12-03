@@ -1,0 +1,54 @@
+﻿@model BalanceViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<!-- Content -->
+<div class="col-sm-12 col-md-8 col-lg-9">
+    <div>
+        <div class="content">
+            <div class="balance-orange">
+                <div class="card order-item order-item-balance">
+                    <div class="card-body" style="padding: 2rem !important;">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="balance-card">
+                                    <div class="balance-card-header">
+                                        <div class="balance-card-total">
+                                            <h3 class="balance-card-title">Balansım</h3>
+                                            <div class="balance-card-total-price">
+                                                <span>
+                                                    @Model.Member.Balance <sup class="manat">₼</sup>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="balance-card-date">
+                                            <p>Son əlavə tarixi</p>
+                                            <strong>2022-10-07</strong>
+                                        </div>
+                                    </div>
+                                    <div class="balance-card-body">
+                                        <p class="balance-card-text">
+                                            Azərbaycana çatdırılma haqqının
+                                            ödənilməsi və online kuryer sifarişi üçün balansınızı
+                                            artıra
+                                            bilərsiniz.
+                                        </p>
+                                        <h4 class="balance-card-note upper">
+                                            ARTIRILAN BALANS GERİ
+                                            QAYTARILMIR.
+                                        </h4>
+                                        <a asp-controller="Payment" asp-action="Index" class="btn btn-success increase-balance" >Balansi Artir </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
